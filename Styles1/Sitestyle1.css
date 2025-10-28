@@ -1,0 +1,156 @@
+body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      color: white;
+      text-align: center;
+      transition: filter 0.5s ease;
+    }
+    .Fake {
+        color: white;
+        border: none;
+        height: 5px;
+        width: 5px;
+        background-color: white;
+        border-color: white;
+        border-width: 0; 
+        position: relative;
+        top: 75px;
+        left: 795px;
+    }
+    .True {
+        color: white;
+        border: none;
+        height: 5px;
+        width: 5px;
+        background-color: white;
+        border-color: white;
+        border-width: 0; 
+        position: relative;
+        top: 75px;
+        right: 425px;
+
+    }
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+
+    header p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 3px solid rgba(255,255,255,0.8);
+      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 12px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 30px;
+      background-color: #0078ff;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background-color: #005fcc;
+      transform: scale(1.05);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 20px;
+      font-size: 16px;
+    }
+
+    footer a {
+      color: #9dd0ff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Розмиття фону */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      backdrop-filter: blur(8px);
+      background-color: rgba(0, 0, 0, 0.25);
+      z-index: 5;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease;
+    }
+
+    .overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Панель опису */
+    .panel {
+      position: fixed;
+      top: 0;
+      right: -400px;
+      width: 350px;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      color: #222;
+      box-shadow: -2px 0 10px rgba(0,0,0,0.3);
+      padding: 40px 20px;
+      transition: right 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      z-index: 10;
+      overflow-y: auto;
+      border-left: 1px solid rgba(255, 255, 255, 0.4);
+    }
+
+    .panel.active {
+      right: 0;
+    }
+
+    .close-btn {
+      background: #ff4b4b;
+      border: none;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      transition: background 0.3s;
+    }
+
+    .close-btn:hover {
+      background: #d93636;
+    }
+
+    h2 {
+      margin-top: 60px;
+    }
+
+    .panel p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+    }
